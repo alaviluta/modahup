@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ModaHub</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h2>ModaHub</h2>
+
+        <p id="sesion"></p>
+
+        <div id="botonCerrar"></div>
+
+        <nav>
+            <a href="mapa.html">Mapa</a>
+            <a href="tiendas.html">Tiendas</a>
+            <a href="curso.html">Curso</a>
+            <a href="blog.html">Blog</a>
+            <a href="cv.html">CV</a>
+            <a href="preguntas.html">Preguntas</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="extras.html">Extras</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="iniciosecion.html">Inicio de sesión</a>
+        </nav>
+
+    </header>
+
+    <h1>Bienvenido a ModaHub</h1>
+
+    <p>
+        Explorá tiendas, tendencias y ropa urbana.
+    </p>
+
+    <img src="imagenes/ropaurbana.png" width="350">
+
+    <script>
+        let usuario =
+            localStorage.getItem(
+                "usuarioModaHub"
+            );
+
+        if (usuario) {
+
+            document.getElementById(
+                    "sesion"
+                ).innerHTML =
+                "Sesión iniciada: " +
+                usuario;
+
+            document.getElementById(
+                    "botonCerrar"
+                ).innerHTML =
+                '<button onclick="cerrarSesion()">Cerrar sesión</button>';
+
+        }
+
+        function cerrarSesion() {
+
+            localStorage.removeItem(
+                "usuarioModaHub"
+            );
+
+            location.reload();
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <script>
+        function mostrarEmpresa() {
+
+            let tienda =
+                document.getElementById("tienda");
+
+            let empresa =
+                document.getElementById("datosEmpresa");
+
+            if (tienda.checked) {
+
+                empresa.style.display = "block";
+
+            } else {
+
+                empresa.style.display = "none";
+
+            }
+        }
+
+        function mostrarRegistro() {
+
+            document.getElementById(
+                "registro"
+            ).style.display = "block";
+
+            document.getElementById(
+                "login"
+            ).style.display = "none";
+
+        }
+
+        function mostrarLogin() {
+
+            document.getElementById(
+                "registro"
+            ).style.display = "none";
+
+            document.getElementById(
+                "login"
+            ).style.display = "block";
+
+        }
+
+        function registrar() {
+
+            let usuario =
+                document.getElementById(
+                    "usuario"
+                ).value;
+
+            let clave =
+                document.getElementById(
+                    "clave"
+                ).value;
+
+            let edad =
+                document.getElementById(
+                    "edad"
+                ).value;
+
+            if (edad < 18) {
+
+                alert(
+                    "Debes ser mayor de edad"
+                );
+
+                return false;
+
+            }
+
+            localStorage.setItem(
+                "usuarioGuardado",
+                usuario
+            );
+
+            localStorage.setItem(
+                "claveGuardada",
+                clave
+            );
+
+            alert(
+                "Cuenta creada correctamente"
+            );
+
+            mostrarLogin();
+
+            return false;
+
+        }
+
+        function iniciarSesion() {
+
+            let usuario =
+                document.getElementById(
+                    "usuarioLogin"
+                ).value;
+
+            let clave =
+                document.getElementById(
+                    "claveLogin"
+                ).value;
+
+            let usuarioGuardado =
+                localStorage.getItem(
+                    "usuarioGuardado"
+                );
+
+            let claveGuardada =
+                localStorage.getItem(
+                    "claveGuardada"
+                );
+
+            if (
+                usuario == usuarioGuardado &&
+                clave == claveGuardada
+            ) {
+
+                localStorage.setItem(
+                    "usuarioModaHub",
+                    usuario
+                );
+
+                window.location =
+                    "index.html";
+
+            } else {
+
+                alert(
+                    "Usuario o contraseña incorrectos"
+                );
+
+            }
+
+            return false;
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Inicio de sesión</h1>
+
+    <button type="button" onclick="mostrarRegistro()">
+
+Crear cuenta
+
+</button>
+
+    <button type="button" onclick="mostrarLogin()">
+
+Iniciar sesión
+
+</button>
+
+    <br><br>
+
+    <div id="registro">
+
+        <form onsubmit="return registrar()">
+
+            <h2>Crear cuenta</h2>
+
+            <label for="usuario">
+Usuario:
+</label>
+
+            <br>
+
+            <input type="text" id="usuario" required minlength="3">
+
+            <br><br>
+
+            <label for="clave">
+Contraseña:
+</label>
+
+            <br>
+
+            <input type="password" id="clave" required minlength="4">
+
+            <br><br>
+
+            <label for="correo">
+Correo:
+</label>
+
+            <br>
+
+            <input type="email" id="correo" required>
+
+            <br><br>
+
+            <label for="edad">
+Edad:
+</label>
+
+            <br>
+
+            <input type="number" id="edad" required>
+
+            <br><br>
+
+            <label>
+Tipo de usuario:
+</label>
+
+            <br>
+
+            <input type="radio" id="comprador" name="tipo" onclick="mostrarEmpresa()" required>
+
+            <label for="comprador">
+Comprador
+</label>
+
+            <br>
+
+            <input type="radio" id="tienda" name="tipo" onclick="mostrarEmpresa()">
+
+            <label for="tienda">
+Tienda o negocio
+</label>
+
+            <br><br>
+
+            <div id="datosEmpresa" style="display:none;">
+
+                <h2>Datos del negocio</h2>
+
+                <label>
+Nombre de empresa:
+</label>
+
+                <br>
+
+                <input type="text" id="empresa">
+
+                <br><br>
+
+                <label>
+Descripción:
+</label>
+
+                <br>
+
+                <textarea id="descripcion" rows="4" cols="40">
+</textarea>
+
+                <br><br>
+
+                <label>
+Logo:
+</label>
+
+                <br>
+
+                <input type="file" id="imagen">
+
+            </div>
+
+            <br>
+
+            <input type="checkbox" required> Acepto términos y condiciones
+
+            <br><br>
+
+            <button type="submit">
+Crear cuenta
+</button>
+
+            <button type="reset">
+Borrar
+</button>
+
+        </form>
+
+    </div>
+
+    <div id="login" style="display:none;">
+
+        <h2>Iniciar sesión</h2>
+
+        <form onsubmit="return iniciarSesion()">
+
+            <label>
+Usuario:
+</label>
+
+            <br>
+
+            <input type="text" id="usuarioLogin" required>
+
+            <br><br>
+
+            <label>
+Contraseña:
+</label>
+
+            <br>
+
+            <input type="password" id="claveLogin" required>
+
+            <br><br>
+
+            <button type="submit">
+Entrar
+</button>
+
+        </form>
+
+    </div>
+
+    <br><br>
+
+    <img src="imagenes/ropaurbana.png" width="300">
+
+    <br><br>
+
+    <a href="index.html">
+Volver al inicio
+</a>
+
+</body>
+
+</html>
