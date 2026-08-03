@@ -1,43 +1,141 @@
-/* Estilos generales del proyecto */
+/* Configuración general */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
     color: #333;
 }
 
+/* Menú de navegación superior */
+nav {
+    background-color: #1a252f;
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+/* Tarjeta principal para centrar contenido */
+.contenedor {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* Encabezados y textos */
 h1 {
-    color: #222;
+    color: #2c3e50;
+    margin-top: 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
 }
 
 h2 {
-    color: #444;
+    color: #34495e;
+    margin-top: 20px;
 }
 
 p {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
+/* Imágenes */
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
 }
 
-a {
-    color: #0066cc;
+/* Botones de enlaces */
+.boton-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.boton-link:hover {
+    background-color: #2980b9;
+}
+
+/* Formulario de contacto */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #27ae60;
+}
+
+/* Separadores */
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 25px 0;
+}
+
+/* Listas del mapa del sitio */
+ul {
+    line-height: 1.8;
+}
+
+ul a {
+    color: #2980b9;
     text-decoration: none;
     font-weight: bold;
 }
 
-a:hover {
+ul a:hover {
     text-decoration: underline;
 }
-
-hr {
     border: 0;
     height: 1px;
     background: #ccc;
