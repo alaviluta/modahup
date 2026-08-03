@@ -7,11 +7,14 @@ body {
     color: #333;
 }
 
-/* Barra de Navegación Superior con Botones */
+/* Barra de Navegación Superior Arreglada */
 nav {
     background-color: #1e293b;
-    padding: 12px;
-    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -20,23 +23,22 @@ nav {
 
 /* Botones del menú */
 .nav-btn {
-    display: inline-block;
     background-color: #334155;
     color: #ffffff;
     text-decoration: none;
-    padding: 8px 14px;
-    margin: 3px;
+    padding: 8px 12px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
 .nav-btn:hover {
     background-color: #2563eb;
 }
 
-/* Botón destacado para Inicio de Sesión */
+/* Botón destacado Inicio de Sesión */
 .nav-login {
     background-color: #16a34a;
 }
@@ -45,7 +47,7 @@ nav {
     background-color: #15803d;
 }
 
-/* Contenedor de la página */
+/* Contenedor principal */
 .contenedor {
     max-width: 800px;
     margin: 30px auto;
@@ -73,7 +75,7 @@ img {
     border-radius: 6px;
 }
 
-/* Formulario e Inputs */
+/* Inputs y Botones */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -109,6 +111,7 @@ textarea {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .boton-link:hover {
