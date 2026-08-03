@@ -3,74 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ModaHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Tiendas de Ropa Deportiva y Urbana</title>
+    <meta name="description" content="Bienvenido a tu guía de tiendas de ropa urbana y deportiva. Encontrá catálogos de Nike, Adidas, Zara y más.">
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <header>
+    <h1>Guía de Tiendas y Catálogos de Ropa</h1>
 
-        <h2>ModaHub</h2>
+    <h2>Explorá las Mejores Marcas</h2>
 
-        <p id="sesion"></p>
+    <p>Encontrá ropa deportiva y urbana de marcas líderes como Nike, Adidas y Zara.</p>
 
-        <div id="botonCerrar"></div>
+    <img src="imagenes/ropaurbana.png" width="300" alt="Moda urbana y deportiva">
 
-        <nav>
-            <a href="mapa.html">Mapa</a>
-            <a href="tiendas.html">Tiendas</a>
-            <a href="curso.html">Curso</a>
-            <a href="blog.html">Blog</a>
-            <a href="cv.html">CV</a>
-            <a href="preguntas.html">Preguntas</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="extras.html">Extras</a>
-            <a href="ranking.html">Ranking</a>
-            <a href="iniciosecion.html">Inicio de sesión</a>
-        </nav>
+    <br><br>
 
-    </header>
+    <h2>Navegación Principal</h2>
 
-    <h1>Bienvenido a ModaHub</h1>
-
-    <p>
-        Explorá tiendas, tendencias y ropa urbana.
-    </p>
-
-    <img src="imagenes/ropaurbana.png" width="350">
-
-    <script>
-        let usuario =
-            localStorage.getItem(
-                "usuarioModaHub"
-            );
-
-        if (usuario) {
-
-            document.getElementById(
-                    "sesion"
-                ).innerHTML =
-                "Sesión iniciada: " +
-                usuario;
-
-            document.getElementById(
-                    "botonCerrar"
-                ).innerHTML =
-                '<button onclick="cerrarSesion()">Cerrar sesión</button>';
-
-        }
-
-        function cerrarSesion() {
-
-            localStorage.removeItem(
-                "usuarioModaHub"
-            );
-
-            location.reload();
-
-        }
-    </script>
+    <a href="tiendas.html">Ver catálogo de tiendas</a><br>
+    <a href="ranking.html">Ver tiendas más populares</a><br>
+    <a href="preguntas.html">Preguntas frecuentes</a>
 
 </body>
 
