@@ -1,67 +1,70 @@
-/* Configuración general */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #f4f6f9;
     color: #333;
 }
 
-/* Menú de navegación superior */
+/* Barra de Navegación Superior con Botones */
 nav {
-    background-color: #1a252f;
-    padding: 12px 0;
+    background-color: #1e293b;
+    padding: 12px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-nav a {
+/* Botones del menú */
+.nav-btn {
+    display: inline-block;
+    background-color: #334155;
     color: #ffffff;
     text-decoration: none;
+    padding: 8px 14px;
+    margin: 3px;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: bold;
-    margin: 0 10px;
-    padding: 8px 12px;
-    display: inline-block;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
-nav a:hover {
-    background-color: #34495e;
+.nav-btn:hover {
+    background-color: #2563eb;
 }
 
-/* Tarjeta principal para centrar contenido */
+/* Botón destacado para Inicio de Sesión */
+.nav-login {
+    background-color: #16a34a;
+}
+
+.nav-login:hover {
+    background-color: #15803d;
+}
+
+/* Contenedor de la página */
 .contenedor {
     max-width: 800px;
     margin: 30px auto;
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Encabezados y textos */
 h1 {
-    color: #2c3e50;
-    margin-top: 0;
-    border-bottom: 2px solid #3498db;
+    color: #0f172a;
+    border-bottom: 2px solid #2563eb;
     padding-bottom: 8px;
 }
 
 h2 {
-    color: #34495e;
-    margin-top: 20px;
+    color: #1e293b;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Imágenes */
 img {
     max-width: 100%;
     height: auto;
@@ -70,74 +73,44 @@ img {
     border-radius: 6px;
 }
 
-/* Botones de enlaces */
-.boton-link {
-    display: inline-block;
-    background-color: #3498db;
-    color: #ffffff;
-    padding: 10px 16px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.boton-link:hover {
-    background-color: #2980b9;
-}
-
-/* Formulario de contacto */
-form input[type="text"],
-form input[type="email"],
-form textarea {
+/* Formulario e Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
     width: 100%;
     max-width: 400px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
     box-sizing: border-box;
 }
 
-form input[type="submit"] {
-    background-color: #2ecc71;
+.btn-submit {
+    background-color: #2563eb;
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-form input[type="submit"]:hover {
-    background-color: #27ae60;
+.btn-submit:hover {
+    background-color: #1d4ed8;
 }
 
-/* Separadores */
-hr {
-    border: 0;
-    height: 1px;
-    background: #e0e0e0;
-    margin: 25px 0;
-}
-
-/* Listas del mapa del sitio */
-ul {
-    line-height: 1.8;
-}
-
-ul a {
-    color: #2980b9;
+.boton-link {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 10px 16px;
     text-decoration: none;
+    border-radius: 6px;
     font-weight: bold;
 }
 
-ul a:hover {
-    text-decoration: underline;
-}
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    margin: 20px 0;
+.boton-link:hover {
+    background-color: #1d4ed8;
 }
