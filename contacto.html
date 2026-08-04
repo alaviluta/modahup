@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto y Atención al Cliente - Catálogo de Indumentaria</title>
-    <meta name="description" content="Ponte en contacto con nosotros para resolver tus dudas sobre el catálogo de tiendas de ropa, marcas deportivas, ofertas y novedades disponibles.">
+    <title>Contacto - Atención al Cliente y Consultas Web</title>
+    <meta name="description" content="Ponete en contacto con nuestro equipo. Envianos tus dudas, sugerencias o consultas sobre catálogos y tiendas a través del formulario de contacto.">
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -29,35 +29,45 @@
     </nav>
 
     <div class="contenedor">
-        <h1>Atención al Cliente y Centro de Contacto</h1>
+        <div class="header-seccion">
+            <h1>Formulario de Contacto</h1>
+            <p>¿Tenés preguntas sobre nuestra guía de tiendas o sugerencias para mejorar el sitio? Completá el siguiente formulario para comunicarte directamente con nuestro equipo de atención.</p>
+        </div>
 
-        <p>En este espacio podés ponerte en contacto directo con nuestro equipo para enviarnos tus dudas, comentarios o sugerencias respecto al portal. Queremos brindarte la mejor experiencia al buscar información sobre las marcas más reconocidas de calzado, indumentaria deportiva y moda urbana del mercado.</p>
+        <div class="bloque-formulario">
+            <h2>Envianos tu Mensaje</h2>
+            <p>Respondemos todas las consultas en un plazo máximo de 24 a 48 horas hábiles.</p>
 
-        <h2>Formulario de Consulta Directa</h2>
+            <div class="formulario-contacto">
+                <form action="#" method="post">
+                    <div class="campo-form">
+                        <label for="nombre">Nombre Completo:</label><br>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+                    </div>
+                    <br>
+                    <div class="campo-form">
+                        <label for="email">Correo Electrónico:</label><br>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <br>
+                    <div class="campo-form">
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje acá..." required></textarea>
+                    </div>
+                    <br>
+                    <div class="boton-form">
+                        <input type="submit" value="Enviar Mensaje" class="btn-submit">
+                    </div>
+                </form>
+            </div>
+        </div>
 
-        <p>Si tenés alguna inquietud específica relacionada con el catálogo de tiendas, lanzamientos o las secciones de la plataforma, completá el siguiente formulario. Te responderemos a la brevedad en la casilla de correo electrónico ingresada.</p>
-
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br><br>
-
-            <label for="email">Correo electrónico:</label><br>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required><br><br>
-
-            <label for="mensaje">Mensaje:</label><br>
-            <textarea id="mensaje" name="mensaje" rows="4" cols="30" placeholder="Escribe tu mensaje aquí" required></textarea><br><br>
-
-            <input type="submit" value="Enviar" class="btn-submit">
-        </form>
-
-        <h3>Información Adicional para Usuarios</h3>
-        <p>Procesamos cada mensaje recibido de manera individual para ofrecerte respuestas precisas sobre disponibilidad de marcas, guía de tiendas físicas y virtuales, o soporte técnico del sitio. Antes de enviar tu consulta, te recomendamos revisar la sección de Preguntas Frecuentes, donde vas a encontrar respuestas inmediatas a las dudas más comunes sobre la navegación y contenidos.</p>
-
-        <h2>Canales de Soporte y Sugerencias</h2>
-        <p>Valoramos enormemente tus comentarios sobre la usabilidad de la plataforma. Si detectás alguna inconsistencia en la información o querés sugerir la inclusión de nuevas marcas y catálogos en nuestro ranking, podés aclararlo en el campo del mensaje para ser evaluado por nuestro equipo de desarrollo.</p>
+        <div class="bloque-info">
+            <h2>Atención Personalizada</h2>
+            <p>Nos interesa brindarte la mejor experiencia de navegación para que encuentres fácilmente la información sobre tus marcas de ropa preferidas.</p>
+        </div>
     </div>
 
 </body>
 
 </html>
-
